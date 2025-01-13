@@ -1,38 +1,122 @@
-.App {
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F3F3F5;
+}
+
+.hero {
+  background-color: #352384;
+  color: white;
+  padding: 182px 0;
   text-align: center;
+  animation: fadeIn 1.5s ease-in;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #F3F3F5;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transform: translateY(10px);
+  animation: slideIn 0.8s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #333347;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: #666;
+  font-size: 16px;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333347;
+}
+
+.input-field {
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 10px rgba(255, 0, 191, 0.5);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.submit-button {
+  padding: 12px;
+  background-color: #FF00BF;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background-color: #E600A3;
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
+.link-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #333347;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.link-button:hover {
+  background-color: #291A6E;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
